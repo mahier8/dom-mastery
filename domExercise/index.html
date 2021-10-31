@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    /* Question 2 */
+    #mascot {
+        width: 76px;
+        height: 76px;
+        display: block;
+        background: url('zozor_sad.png') no-repeat;
+        background-size: 76px 76px;
+    }
+    #mascot[data-state='happy'] {
+        background: url('zozor_happy.png') no-repeat;
+        background-size: 76px 76px;
+    }
+
+    /* Question 3 */
+    #output3 {
+        font-size: 50px;
+        font-style: italic;
+        margin: 0.25em 0;
+        padding: 0.25em 40px;
+        line-height: 1.45;
+        position: relative;
+    }
+        /* color: #fff; */
+
+    #output3>blockquote {
+        color: #FF0;   
+        font-size: 14px;
+        display: block;
+        margin-top: 5px;
+        font-style: italic;
+    }
+    </style>
+</head>
+<body>
+    <!-- Question 1 -->
+    <div id="output">Link to <a href="#">Wcoding</a></div>
+
+    <!-- Question 2 -->
+    <div id="output2">Link to 
+        <span id="mascot">
+
+        </span>
+    </div>
+
+    <!-- Question 3 -->
+    
+
+    <div id="output3">We are gonna have the destiny that we deserve</div>
+
+
+    <script>
+
+    // Question 1
+    var link = document.querySelector('a');
+    var href = link.getAttribute("href");
+
+    link.setAttribute('href', 'http://www.wcoding.com'); 
+
+    // Question 2    
+    var mascot = document.querySelector('#mascot');
+    console.log(mascot);
+
+    // var idChange = id.getAttribute("id");
+
+    mascot.setAttribute('data-state', "happy");
+
+    // Maries code
+    // var zozor = document.getElementById('mascot');
+    // if (zozor) {
+    //     zozor.setAttribute('data-state', 'happy');
+    // }
+
+    // Question 3
+    let output3 = document.querySelector("#output3"); 
+    // // we first store the queryselector we want to target in a variable
+    let quote = output3.textContent;
+    // // then we store the text content (textContent method) in the variable quote 
+    // // (similar to how we stored the canada text)   
+
+    output3.innerHTML = `<blockquote>${quote}</blockquote>`;
+    // we now call the targeted node, use the innerHTML method, 
+    // then interpolate the string quote variable inside
+
+    </script>
+</body>
+</html>
+
