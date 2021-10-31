@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    
+    <script>
+        // main div
+        let maindiv = document.createElement('div');
+        maindiv.id = "divEx2";
+        document.body.appendChild(maindiv);
+
+        // first paragraph
+        let firstparagraph = document.createElement('p');
+        let tnParagraph = document.createTextNode('Languages based on ECMAScript :')
+        maindiv.appendChild(firstparagraph)
+        firstparagraph.appendChild(tnParagraph);
+
+        // ul and li
+        let ul = document.createElement("ul"); // create the ul
+        maindiv.appendChild(ul); // add the created ul to the main div
+        let languages = [ // create an array to store all the languages that are created
+            document.createTextNode('JavaScript'),
+            document.createTextNode('JScript'),
+            document.createTextNode('ActionScript'),
+            document.createTextNode('EX4')
+        ];
+        for (let i = 0; i < languages.length; i++) { // go through the length of the array
+            let li = document.createElement("li"); // create an li element for each item in the array
+            li.appendChild(languages[i]); // for each item in the array append
+            ul.appendChild(li); // append the li to the ul
+        }
+    </script>
+
+    <!-- <div id="EX2">
+        <p>Languages based on ECMAScript :</p>
+
+        <ul>
+            <li>JavaScript</li>
+            <li>JScript</li>
+            <li>ActionScript</li>
+            <li>EX4</li>
+        </ul>
+    </div>  -->
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // main div
+        let maindiv = document.createElement('div');
+        maindiv.id = "divEx4";
+        document.body.appendChild(maindiv);
+
+        // form
+        let firstform = document.createElement('form');
+        firstform.enctype = "multipart/form-data";
+        firstform.method = "post";        
+        firstform.action = "upload.php";
+        maindiv.appendChild(firstform);
+
+        // fieldset
+        let firstFieldset = document.createElement('fieldset');
+        firstform.appendChild(firstFieldset);
+
+        // legend
+        let firstLegend = document.createElement('legend');
+        firstFieldset.appendChild(firstLegend);
+        let tnFirstLegend = document.createTextNode('Upload an image');
+        firstLegend.appendChild(tnFirstLegend);
+
+        // div inside fieldset
+        let fieldDiv = document.createElement('div');
+        firstFieldset.appendChild(fieldDiv);
+        fieldDiv.style = "text-align: center";
+
+        // label inside div
+        let firstLabel = document.createElement('label');
+        fieldDiv.appendChild(firstLabel);
+        firstLabel.htmlFor = "inputUpload"; // this part isnt showing
+        let tnFirstLabel = document.createTextNode('Image to upload :');
+        firstLabel.appendChild(tnFirstLabel);
+
+        // input inside div
+        let firstInput = document.createElement('input');
+        fieldDiv.appendChild(firstInput);
+        firstInput.type = "submit";
+        firstInput.name = "inputUpload";
+        firstInput.id = "inputUpload";
+
+        // br inside div
+        let firstBreak = document.createElement('br');
+        fieldDiv.appendChild(firstBreak);
+
+        // input inside div
+        let secondInput = document.createElement('input');
+        fieldDiv.appendChild(secondInput);
+        secondInput.type= "submit";
+        secondInput.value= "send";
+
+
+    </script>
+
+    <!-- <div id="EX4">
+        <form enctype="multipart/form-data" method="post" action="upload.php">
+            <fieldset>
+                <legend>Upload an image</legend>
+                
+                <div style="text-align: center">
+                    <label for="inputUpload">Image to upload :</label>
+                    <input type="file" name="inputUpload" id="inputUpload" />
+                    <br /><br />
+                    <input type="submit" value="Send" />        
+                </div>
+            </fieldset> 
+        </form>
+    </div> -->
+</body>
+</html>

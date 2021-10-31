@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // let maindiv = document.body.createElement('div');
+        // maindiv.appendChild(div);
+        let maindiv = document.createElement('div');
+        maindiv.id = "divEx1";
+        document.body.appendChild(maindiv);
+
+        // first Textnode + first textnode inside strong
+        let firstTextnode = document.createTextNode('The ');
+        maindiv.appendChild(firstTextnode);
+
+        // first Strong
+        let firstStrong = document.createElement('strong');
+        let tnStrong = document.createTextNode('World Wide Web Consortium');
+        firstStrong.appendChild(tnStrong);
+        maindiv.appendChild(firstStrong);
+        
+        // second Textnode
+        let secondTextnode = document.createTextNode(', abbreviated as acronym');
+        maindiv.appendChild(secondTextnode);
+
+        // second strong + second textnode inside strong
+        let secondStrong = document.createElement('strong');
+        let tnStrong2 = document.createTextNode(' W3C');
+        secondStrong.appendChild(tnStrong2);
+        maindiv.appendChild(secondStrong);
+
+        // third textnode
+        let thirdTextnode = document.createTextNode(', is an ');
+        maindiv.appendChild(thirdTextnode);
+
+        // first link
+        let firstLink = document.createElement('a');
+        firstLink.href = "https://en.wikipedia.org/wiki/Standards_organization";
+        firstLink.title = "standards organization";
+        let tnLink = document.createTextNode('standards organization');
+        maindiv.appendChild(firstLink);
+        firstLink.appendChild(tnLink);
+
+        // fourth textnode
+        let fourthTextnode = document.createTextNode(' non-profit organization responsible for promoting the compatibility of the ')
+        maindiv.appendChild(fourthTextnode);
+
+        // second link 
+        let secondLink = document.createElement('a');
+        secondLink.href = "https://en.wikipedia.org/wiki/World_Wide_Web_Consortium";
+        secondLink.title = "World Wide Web";
+        let tnSecondLink = document.createTextNode('World Wide Web');
+        maindiv.appendChild(secondLink);
+        secondLink.appendChild(tnSecondLink);
+
+        // fifth textnode
+        let fifthTextnode = document.createTextNode('.');
+        maindiv.appendChild(fifthTextnode);
+
+
+    </script>
+</body>
+</html>
+
+<!-- <div id="divEX1">
+    The <strong>World Wide Web Consortium</strong>, abbreviated as acronym<strong>W3C</strong>, is an
+    <a href="https://en.wikipedia.org/wiki/Standards_organization" title="standards organization">standards organization</a> non-profit organization responsible for promoting the compatibility of the <a href="https://en.wikipedia.org/wiki/World_Wide_Web_Consortium" title="World Wide Web">World Wide Web</a>.
+</div> -->

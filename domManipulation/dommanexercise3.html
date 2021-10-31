@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // main div
+        let maindiv = document.createElement('div');
+        maindiv.id = "divEx3";
+        document.body.appendChild(maindiv);
+
+        // first paragraph
+        let firstparagraph = document.createElement('p');
+        let tnParagraph = document.createTextNode('Languages based on ECMAScript :')
+        maindiv.appendChild(firstparagraph)
+        firstparagraph.appendChild(tnParagraph);
+
+        // literal objects
+        let dl = document.createElement("dl");
+        maindiv.appendChild(dl);
+
+        // create an array of objects
+        let languages = [{
+            "dt" : document.createTextNode('JavaScript'),
+            "dd" : document.createTextNode('JavaScript is a scripting language mainly used in interactive web pages but also server-side.'),
+        },
+        {
+            "dt" : document.createTextNode('JScript'),
+            "dd" : document.createTextNode('JScript is the generic name for several ECMAScript 3 implementations created by Microsoft.'),
+
+        },
+        {
+            "dt": document.createTextNode('ActionScript'),
+            "dd" : document.createTextNode('ActionScript is the programming language used in client (Adobe Flash, Adobe Flex) and server (Flash Media server, JRun, Macromedia Generator) applications.'),
+
+        },
+        {
+            "dt": document.createTextNode('EX4'),
+            "dd" : document.createTextNode('ECMAScript for XML (E4X) is an XML extension to the ECMAScript language.'),
+
+        }]
+
+        // loop through the whole array and create elements for dt and dd
+        for (let i =0 ; i<languages.length; i++) { 
+            let dt = document.createElement("dt"); 
+            let dd = document.createElement("dd"); 
+
+            // append each dt and dd from the array
+            dt.appendChild(languages[i].dt); 
+            dd.appendChild(languages[i].dd); 
+
+            // append the dt and dd in the dl (similar to ul in this case) 
+            dl.appendChild(dt); 
+            dl.appendChild(dd); 
+}
+    </script>
+
+<!-- <div id="EX3">
+    <p>Languages based on ECMAScript :</p>
+    
+    <dl>
+        <dt>JavaScript</dt>
+        <dd>JavaScript is a scripting language mainly used in interactive web pages but also server-side.</dd>
+        
+        <dt>JScript</dt>
+        <dd>JScript is the generic name for several ECMAScript 3 implementations created by Microsoft.</dd>
+        
+        <dt>ActionScript</dt>
+        <dd>ActionScript is the programming language used in client (Adobe Flash, Adobe Flex) and server (Flash Media server, JRun, Macromedia Generator) applications.</dd>
+    
+        <dt>EX4</dt>
+        <dd>ECMAScript for XML (E4X) is an XML extension to the ECMAScript language.</dd>
+    </dl>
+</div> -->
+</body>
+</html>
