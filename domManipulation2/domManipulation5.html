@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    
+    <div id="output">
+        Hello everyone, i am Zozor and here is my family  : <br/>
+        <dl>
+            <dt>Zazette</dt>
+            <dd> My mum </dd>
+            <dt> Zozo </dt>
+            <dd> my dad </dd>
+            <dt>Zazie</dt>
+            <dd>My sister </dd>
+            <dt> Zazou</dt>
+            <dd> my brother</dd>
+        </dl>
+        <p> 
+            I'm living in a pasture looking like the video clip
+            <a href="https://www.youtube.com/watch?v=Iwb6u1Jo1Mc"> Respire
+            of <cite>Mickey 3D</cite>
+        </p>
+    </div>
+
+    <script>
+        // remove dl
+        let dline = document.querySelector('dl');
+        console.log(dline);
+
+        dline.parentNode.removeChild(dline);
+
+        // remove paragraph
+        let pElement = document.querySelector('p');
+        console.log(pElement);
+
+        pElement.parentNode.removeChild(pElement);
+
+        // remove textnode
+        let mainDiv = document.getElementById('output');
+        let textNode = mainDiv.firstChild;
+        console.log(textNode);
+
+        textNode.parentNode.removeChild(textNode);
+
+        // The childNodes property returns an array containing the list of children in an element.
+        // we could use a while loop or a decremental loop
+        // let mainDiv = document.getElementById('output')
+
+        // for (let i = mainDiv.childNodes.length; i > 0; i--) { 
+            // console.log(mainDiv, firstChild);
+            // mainDiv.removeChild(mainDiv.firstChild);
+        // }
+    </script>
+</body>
+</html>

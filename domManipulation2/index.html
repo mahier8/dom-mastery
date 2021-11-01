@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    <div id="output">
+        <ol id="zozor-books">
+            <li>Zozor at the farm</li>
+            <li>Zozor at the school</li>
+            <li>Zozor on vacation</li>
+            <li>Zozor in winter class</li>
+            <li>Zozor the syndicalist</li>
+            <li>Zozor on strike</li>
+        </ol>
+    </div>
+
+    <script>
+        let ol = document.getElementById('zozor-books');
+        console.log(ol); 
+        // go to the last element
+        let child = ol.lastElementChild;
+        console.log(child); 
+        // go to the second last element
+        let previousChild = child.previousElementSibling;
+        console.log(previousChild); //
+
+        // create and append the li and text
+        let secondLastLi = document.createElement('li');
+        let tnSecondLastLi = document.createTextNode('Zozor unemployed')
+        previousChild.appendChild(secondLastLi);
+        secondLastLi.appendChild(tnSecondLastLi);
+
+        // grab then create and append the li and text
+        let lastOl = document.getElementById('zozor-books');
+        console.log(lastOl);
+        let lastLi = document.createElement('li');
+        let tnLastLi = document.createTextNode('Zozor makes a fortune');
+        lastOl.appendChild(lastLi);
+        lastLi.appendChild(tnLastLi);
+
+
+    </script>
+</body>
+</html>

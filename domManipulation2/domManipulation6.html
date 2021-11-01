@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    
+    <script>
+        function createSimpleNode(elementName, attributes, htmlContent) {
+            // variable to store created element, passing in element name
+            let nameCreator = document.createElement(elementName);
+            console.log(nameCreator);
+
+            // let attributeCreator = 
+
+            // return value of variable creator
+            return nameCreator;
+        }
+
+        // passing in values to function, then storing it in variables
+        var paragraph = createSimpleNode('p',);
+        var image = createSimpleNode('img', { src: 'wcoding.png', alt: 'Logo wcoding' });
+        var link  = createSimpleNode('a', {'class': 'external', href: 'www.wcoding.com'}, 'Link to wcoding website');
+        // checking on the values
+        console.log(paragraph);
+        console.log(image);
+        console.log(link);
+    </script>
+</body>
+</html>

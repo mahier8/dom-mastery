@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    
+    <div id="output">
+        <span id="mascot">
+        </span>
+    </div>
+
+    <!-- <Figure>
+        <img src = "data/zozor-happy.png" alt = "Photo of Zozor" />
+        <figcaption> Photo of Zozor </ figcaption>
+
+
+   </Figure>  -->
+    <script>
+        // replace span with figure
+        let replaceDiv = document.querySelector('div');
+        console.log(replaceDiv); //
+        let newFigure = document.createElement('figure');
+
+        replaceDiv.replaceChild(newFigure, replaceDiv.firstElementChild);
+
+        // add in image
+        let figureElement = document.querySelector('figure');
+        let newImage = document.createElement('img');
+        figureElement.appendChild(newImage);
+        newImage.src = "data/zozor-happy.png";
+        newImage.alt = "Photo of Zozor";
+
+        // add in figcaption
+        let newFigcaption = document.createElement('figcaption');
+        let tnFicaption = document.createTextNode(' Photo of Zozor ')
+        figureElement.appendChild(newFigcaption);
+        newFigcaption.appendChild(tnFicaption);
+
+    </script>
+</body>
+</html>
+
