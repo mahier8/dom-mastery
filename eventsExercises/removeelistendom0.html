@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output">
+        <p class="center">
+            <button type="button">Click Me</button>
+            <button id="button2" type="button">Don't click me</button>
+        </p>
+    </div>
+
+    <script>
+            let button = document.querySelector('button'); // we select the button
+            console.log(button);
+            button.onclick = function() { // dom 0 needs to use an anonymous function
+                this.textContent = "You clicked"; // set textContent
+                // now we can use this instead of button to refer to button   
+            }
+
+            let button2 = document.querySelector('#button2');
+            console.log(button2)
+            button2.onclick = function() { 
+                this.textContent = "You clicked";
+                button.onclick = ""; // to remove event using dom 0 on first button
+            }
+
+    </script>
+</body>
+</html>

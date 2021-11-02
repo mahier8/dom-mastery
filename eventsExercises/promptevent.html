@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    <div id="output3">
+        <p>Some interpreted languages : </p>
+        <ol>
+            <li>PHP</li>
+            <li>Ruby</li>
+            <li>Python</li>
+            <li>Perl</li>
+            <li>Javascript</li>
+            <li>Lua</li>
+            <li>VBScript</li>
+        </ol>
+    </div>
+
+    <script>
+        let lis = document.querySelectorAll("li");
+        for (let i = 0; i < lis.length; i++) {
+            let li = lis[i];
+            console.dir(li);
+            li.addEventListener("click", function(e) {
+                let savedLanguage = e.target.textContent; // store the lanaguages as they are in a variable
+                // displayContent(e.target);//e.target same as this
+                newLanguage = prompt('Change the langauges', savedLanguage);// the second argument
+                
+                if (newLanguage) {
+                    // alert("its empty"); 
+                    e.target.textContent = newLanguage;
+                } else {
+                    e.target.textContent = savedLanguage;
+                }
+            }); 
+        }
+
+// Maries code
+// var items = document.querySelectorAll('#output2 li');
+// for (var i=0, i<items.length; i++) {
+// items[i].addEventListener("click", function() {
+// if (text = prompt("modify the text", this.innerHTML)) {
+//     this.innerHTML = text;
+// }
+// }, false);
+// }
+    </script>
+</body>
+</html>

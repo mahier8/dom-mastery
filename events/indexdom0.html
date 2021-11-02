@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mainContainer">
+        <div>
+            <div id="logo"><img src="fake.png" alt="should be logo"></div>
+        </div>
+        <nav>
+            <ul>
+                <li data-list="0">Item 1</li>
+                <li data-list="1">Item 2</li>
+                <li data-list="2">Item 3</li>
+            </ul>
+        </nav>
+        <section>
+            <h1 class="title princ1 specFont">My test on DOM</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Exercitationem atque totam nihil amet laudantium rem nostrum ex quos dolorem, aperiam reiciendis, dolor quis dolores? Excepturi aperiam reiciendis ea. Velit, ex.</p>
+        </section>
+        <div id="subsec"></div>
+    </div>
+    <script>
+        function displayContent(element){
+            let div = document.querySelector('#subsec');
+            div.textContent = element.textContent;
+        }
+        //DOM-0
+        let lis = document.querySelectorAll("li");
+        for(let i =0; i<lis.length; i++) {
+            let li = lis[i];
+            console.dir(li);
+            li.onclick = function () {
+                displayContent(this)
+            }
+            
+        }//end for
+        lis[0].onclick = function () {
+            alert('Hello');
+        }
+        console.log(lis);
+
+        // Remove event listener
+        // let button = document.querySelector('button');
+        // button.onclick = function() {
+        //     for(let i =0; i<lis.length; i++) {
+        //         let li = lis[i];
+        //         li.onclick = "";
+        //     }
+        // }
+    </script>
+    <script src="events.js"></script>
+</body>
+</html>

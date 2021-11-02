@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    <div id="output">
+        <p class="center">
+            <button type="button" onclick="displayContent(this)">Click Me</button> 
+            <!-- We add this as an argument to the displayContent function  -->
+            <button type="button" onclick="displayContent(this)">Don't Click Me</button> 
+        </p>
+    </div>
+    <script>
+    function displayContent(element) { // we pass down the element (a more suitable name)
+        element.textContent = 'You clicked'; // textContent to change the text
+        // because we used this, we can just refer to element argument which we passed down
+    }
+    let button2 = document.querySelector('button').nextElementSibling; 
+    // we use this to go to the next element sibling, the second button 
+    console.log(button2)
+    button2.onclick = function() { 
+        this.textContent = "You clicked";
+        button2.previousElementSibling.onclick = ""; 
+        // to remove clicking event on the previous element sibling, the first button
+    }
+    </script>
+</body>
+</html>
+
