@@ -27,6 +27,6 @@ body {
     align-items: center;
 }
 
-#one {
-
+.winner {
+    border : 5px solid green;
 }
