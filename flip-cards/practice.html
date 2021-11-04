@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="text" type="text" size="60" value="you don't have the focus !" />
+
+    <script>
+            var text = document.getElementById('text');
+    
+    text.addEventListener('focus', function(e) {
+        e.target.value = "You have the focus !";
+    });
+    
+    text.addEventListener('blur', function(e) {
+        e. target.value = "you don It have the focus !";
+    });
+    </script>
+</body>
+</html>
