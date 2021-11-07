@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    <div id="output">
+        <ol class="left">
+            <li><input type="checkbox"> About a tutorial</li>
+            <li><input type="checkbox"> thanks</li>
+            <li><input type="checkbox"> is it working?</li>
+            <li><input type="checkbox"> answers</li>
+            <li><input type="checkbox"> Javascript tutorial</li>
+            <li><input type="checkbox"> azerty</li>
+            <li><input type="checkbox"> Delete tags &lt;br/&gt;</li>
+            <li><input type="checkbox"> hiring</li>
+            <li><input type="checkbox"> question about a tutorial</li>
+            <li><input type="checkbox"> no access</li>
+        </ol>
+        <p class="center">
+            <button type="button" id="button-check">Check All</button>
+            <button type="button" id="button-uncheck">Uncheck All</button>
+        </p>
+    </div>
+
+    <script>
+        let firstButton = document.querySelector('#button-check');
+        console.log("clicked first button");
+        firstButton.addEventListener('click', function(e) {
+            let allInputs = document.querySelectorAll("input[type='checkbox']");
+            
+            for (var i = 0; i < allInputs.length; i++) {
+                allInputs[i].checked = true;
+            }
+        });
+
+        let secondButton = document.querySelector('#button-uncheck');
+        console.log("clicked second button");
+        secondButton.addEventListener('click', function(e) {
+            let allInputs = document.querySelectorAll("input[type='checkbox']");
+            
+            for (var i = 0; i < allInputs.length; i++) {
+                    allInputs[i].checked = false;
+            }
+        });
+    </script>
+</body>
+</html>

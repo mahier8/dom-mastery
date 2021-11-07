@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    <!-- Question 1
+    <textarea> Content of the textarea </textarea> -->
+
+    <!-- Question 2 -->
+    <!-- <input type="radio" name="radiogroup" id="747"> Boeing 747
+    <input type="radio" name="radiogroup" id="737"> Boeing 737
+    <input type="radio" name="radiogroup" id="757" checked> Boeing 757 --> 
+    <!-- needed to add checked here to corrospond with the if statement below-->
+
+
+    <!-- Question 3 -->
+    <input type="text" name="inputs" id="stuffInput"> 
+    <output id="stuffOutput"></output>
+
+    <!-- Question 4 -->
+    <!-- <form onsubmit="return myFrameWork.checkThisForm(this)">
+        <input type="text">
+        <input type="text">
+    </form> -->
+
+    <script>
+//     Question 1
+//     var texta = document.querySelectorAll("textarea");
+
+//     if(texta[0]) { 
+//     alert(texta[0].value.trim());
+// }
+
+    // Question 2
+    // var radios = document.getElementsByName("radiogroup");
+    // var target = null;
+
+    // for(var i = 0; i < radios.length; i++){
+    //     if (radios[i].checked) {
+    //         target = radios[i];
+    //         break;
+    //     }
+    // }
+
+    // alert(target.id);
+
+    // Question 3
+    var stuff = document.querySelector("#stuffInput");
+    var output = document.querySelector("#stuffOutput");
+
+    if(stuff && output){
+        stuff.addEventListener("keyup", function() { // shows up on release of each key
+            output.textContent = stuff.value.trim();
+        });
+    }
+
+    // Question 4
+//     var myFramework = {};
+
+//     myFramework["checkThisForm"] = function(form) {
+//     var inputs = form.querySelectorAll(input[type="text"]);
+
+
+//     for (var i = 0; i < inputs.length; i++) {
+//         if(!inputs[i].value) {
+//             return false;
+//         }
+//     }
+//     return true;
+// };
+
+
+</script>
