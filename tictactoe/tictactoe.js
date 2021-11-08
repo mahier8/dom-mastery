@@ -9,7 +9,7 @@ function createGrid() {
     container.appendChild(row);
     for (let j = 0; j < 3; j++) {
       let cell = document.createElement("div");
-      cell.className = "cell"; ///
+      cell.className = "cell";
       cell.setAttribute("cell-id", counter);
       // set the attribute in each div to cell-id
       counter++; // counter will increment for each div giving each an id
@@ -56,9 +56,9 @@ function calculateWinner(squares) {
 createGrid();
 
 // This is where I add the click eventlistener
-let divCells = document.querySelectorAll(".cell"); ///
+let divCells = document.querySelectorAll(".cell");
 let isX = true;
-let square = new Array(9).fill(null); // it shows you
+let square = new Array(9).fill(null);
 
 // the clicking functions x and o
 for (let i = 0; i < divCells.length; i++) {

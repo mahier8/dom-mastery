@@ -1,67 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <link rel="stylesheet" href="style/style.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
     <div id="output2">
-        <p class="center">
-            <label for="email-1">Email : </label>
-            <input type="text" name="email-1" id="email-1" placeholder="Enter your email">
-        </p>
-        <p class="center">
-            <label for="email-2">Confirm </label>
-            <input type="text" name="email-2" id="email-2" placeholder="Confirm your email">
-        </p>
+      <p class="center">
+        <label for="email-1">Email : </label>
+        <input
+          type="text"
+          name="email-1"
+          id="email-1"
+          placeholder="Enter your email"
+        />
+      </p>
+      <p class="center">
+        <label for="email-2">Confirm </label>
+        <input
+          type="text"
+          name="email-2"
+          id="email-2"
+          placeholder="Confirm your email"
+        />
+      </p>
     </div>
     <script>
+      function emailComparison() {
+        var email_1 = document.getElementById("email-1"),
+          email_2 = document.getElementById("email-2");
 
-    var email_1 =  document.getElementById('email-1'),
-        email_2 =  document.getElementById('email-2');
-
-    
-    email_1.addEventListener('keyup', function(e) { // can i pass in an optional argument
-        let firstvalue = email_1.value;
-        console.log(firstvalue);
-        // I need to compare the value from first input to the value from the secondInput 
-        // valueComparison(firstvalue);
-        email_1.addEventListener('blur', function(e) {
-
+        email_1.addEventListener("keyup", function (e) {
+          if (email_1.value == email_2.value) {
+            e.target.className = "blueBorder";
+          } else {
+            e.target.className = "redBorder";
+          }
         });
-    });
-
-    email_2.addEventListener('keyup', function(e) {
-        let secondvalue = email_2.value;
-        console.log(secondvalue);
-        // valueComparison(secondvalue);
-        email_2.addEventListener('blur', function(e) {
-
-});
-    });
-
-
-    // I want to pass down the values from the previous element to use to 
-    // compare in the function below
-    function valueComparison(email_1, email_2) {
-    if (email_1.value === email_2.value) {
+        email_2.addEventListener("keyup", function (e) {
+          if (email_1.value == email_2.value) {
+            e.target.className = "blueBorder";
             email_1.className = "blueBorder";
-            email_2.className = "blueBorder";
+          } else {
+            e.target.className = "redBorder";
+          }
+        });
+      }
+
+      // email1 can only be blue after email2 is blue
+
+      emailComparison();
+
+      function firstEmail(first) {
+        email_1.addEventListener("keyup", function (e) {
+          // can i pass in an optional argument
+          let firstvalue = email_1.value;
+          console.log(firstvalue);
+          // I need to compare the value from first input to the value from the secondInput
+          // valueComparison(firstvalue);
+          email_1.addEventListener("blur", function (e) {});
+        });
+      }
+
+      function secondEmail(second) {
+        email_2.addEventListener("keyup", function (e) {
+          let secondvalue = email_2.value;
+          console.log(secondvalue);
+          // valueComparison(secondvalue);
+          email_2.addEventListener("blur", function (e) {});
+        });
+      }
+
+      // I want to pass down the values from the previous element to use to
+      // compare in the function below
+      function valueComparison(firstEmail, secondEmail) {
+        if (email_1.value == email_2.value) {
+          email_1.className = "blueBorder";
+          email_2.className = "blueBorder";
         } else {
-            email_1.className = "redBorder";
-            email_2.className = "redBorder";
+          email_1.className = "redBorder";
+          email_2.className = "redBorder";
         }
+      }
 
-    }
-
-    // valueComparison();
-    // I need to call this in the event listener
-
+      // valueComparison();
+      // I need to call this in the event listener
     </script>
-</body>
+  </body>
 </html>
