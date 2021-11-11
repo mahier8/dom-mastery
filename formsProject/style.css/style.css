@@ -16,3 +16,11 @@
     justify-content: center;
     flex-direction: row;
 }
+
+.correct {
+    background-color: rgb(104, 198, 166);
+}
+
+.incorrect {
+    background-color: rgb(255, 127, 127);
+}
