@@ -1,0 +1,19 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#buttons {
+    display: flex;
+}
+
+button {
+    padding: 5px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+#button1 {
+    background-color: rgb(97, 97, 179);
+    color: white;
+}
